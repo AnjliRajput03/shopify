@@ -1,0 +1,865 @@
+*{
+
+  margin: 0;
+  padding: 0;
+  
+  }
+  body{
+width: 100%;
+
+  }
+  .marquee-container {
+  font-family: roboto;
+      background: #B8A293; /* Change color as needed */
+      padding: 10px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      width: 100%;
+  }
+
+  /* Moving text */
+  .marquee {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      animation: marquee-scroll 20s linear infinite;
+  }
+
+  /* Fix animation */
+  @keyframes marquee-scroll {
+      from {
+          transform: translateX(100%);
+      }
+      to {
+          transform: translateX(-100%);
+      }
+  }
+  
+
+  
+
+
+
+  /* Header Styles */
+.header {
+  background-color: #E5DCD4; /* Light beige */
+  padding: 15px 0;
+  border-top: 1px solid #c4a28a; /* Thin top border */
+}
+
+.header-container {
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+/* Left Icons */
+.left-icons i {
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 26px;
+  
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
+  margin: -24px 0px 33px 323px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+  
+ 
+
+
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  margin-left: 18vw;
+  margin-bottom: -2vw;
+}
+.right-icons{
+  margin-left: 72vw;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #2C2C2C;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #A67C52; /* Brownish hover effect */
+}
+
+/* Right Icons */
+.right-icons i {
+  font-size: 18px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.carousel {
+  width: 99vw;
+  height: 647px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: 200%; /* Since there are 2 images */
+  height: 100%;
+  animation: slide 5s infinite alternate ease-in-out;
+}
+
+.carousel-image {
+  width: 50%; /* Each image takes half of the track */
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Keyframes for sliding animation */
+@keyframes slide {
+  0%, 42.86% {
+      transform: translateX(0);
+  }
+  57.14%, 100% {
+      transform: translateX(-50%);
+  }
+}
+
+  
+
+ 
+
+
+
+/* Section layout */
+.welcome-section {
+  background-color: #b58567;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Image container */
+.image-container {
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 50% 50% 0 0; /* Creating a rounded top */
+  object-fit: cover;
+}
+
+/* Text container */
+.text-container {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+  text-align: left;
+  color: white;
+}
+
+.text-container p{
+  opacity: 0.5;
+}
+
+.text-container h2 {
+  font-size: 45px;
+  font-weight: normal;
+  margin-bottom: 15px;
+
+  font-family: great vibes;
+}
+
+/* Button styling */
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: white;
+  font-family: roboto;
+  color: #b58567;
+  text-decoration: none;
+  font-weight: 200;
+ 
+  margin-top: 20px;
+
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+/* 📌 Mobile Screens (max-width: 768px) */
+
+
+
+
+
+.most-wanted {
+  background-color: #e3dcd7; /* Beige background */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Title */
+.most-wanted h2 {
+  font-size: 32px;
+  font-family: great vibes;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.product-name{
+  font-family: great vibes;
+}
+.product-name:hover{
+  text-decoration: underline;
+}
+
+
+.product-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px;
+  background-color: #e3dcd7; /* Light Beige Background */
+}
+
+/* Individual product */
+.product {
+  position: relative;
+  width: 220px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+/* Image container */
+.product img {
+  width: 100%;
+  height: 300px;
+  display: block;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Hover image initially hidden */
+.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* Hover effect */
+.product:hover .default-img {
+  opacity: 0;
+}
+
+.product:hover .hover-img {
+  opacity: 1;
+}
+
+/* Product Name */
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Price */
+.product-price {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Button */
+.choose-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: 1px solid black;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 190px;
+}
+
+.choose-btn:hover {
+ border: 2px solid black;
+}
+
+.main2 {
+  background-image: url("https://images.pexels.com/photos/10983785/pexels-photo-10983785.jpeg?auto=compress&cs=tinysrgb&w=600");
+  height: 140vh;
+  width: 99vw;
+
+  background-size: cover; /* Makes it cover the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-attachment: fixed; /* Keeps it fixed on scroll (optional) */
+}
+.transparent {
+  color: white;
+
+  height: 348px;
+  width: 677px;
+  padding: 110px 20px 20px 587px;
+}
+
+.hero-image img{
+  width: 100vw;
+}
+
+.btn {
+  width: 135px;
+
+  height: 45px;
+  font-size: 17px;
+  border: 1px solid black;
+  color: black;
+  background: transparent;
+  
+}
+.btn:hover {
+  border: 2px solid black;
+}
+.transparent h1 {
+  font-family: great vibes;
+  padding-bottom: 23px;
+  font-size: 42px;
+}
+.transparent h3 {
+  padding-bottom: 23px;
+  padding-left: 34px;
+}
+
+
+/* subcribe section  */
+.subscribe-section2 {
+   background-color: #B8A293;
+   height: 406px !important;
+   padding: 40px 20px 20px 454px;
+   color: white;
+   margin-top: 10vw;
+
+ }
+ .subscribe-section2 h2{
+   
+    font-size: 50px;
+   padding-bottom: 12px;
+    font-family: great vibes;
+ }
+ .subscribe-section2  p{
+    padding-bottom: 12px;
+   
+ }
+ input::placeholder {
+     color: white;  /* Apne pasand ka color set karo */
+     opacity: 1;  /* Full visibility ke liye */
+ }
+ button{
+ color: white;
+ 
+ }
+ 
+ 
+ .email-input {
+     display: flex;
+   
+    
+     
+     color: white;
+     border: 1px solid white;
+     width: 294px;
+ }
+ 
+ .email-input input {
+     padding: 10px;
+     width: 250px;
+     background: #B8A293;
+     border: none;
+    
+ }
+ 
+ 
+ .email-input button {
+     background: #B8A293;
+     border: none;
+     padding: 10px;
+     cursor: pointer;
+ }
+ 
+.featured-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+  background-color: #e3d6cc; /* Beige background */
+  font-family: 'Poppins', sans-serif;
+}
+
+.featured-item {
+  text-align: center;
+  
+  padding: 20px;
+ 
+}
+.featured-item h3{
+  font-family: great vibes;
+}
+
+.featured-item img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  
+}
+
+h3 {
+  font-size: 18px;
+  margin-top: 15px;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+}
+.shop-button {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  
+  padding-bottom: 3px;
+  transition: 0.3s ease;
+}
+
+.hero-image img{
+width:99vw;
+
+}
+.testimonials {
+  padding: 50px 20px;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: great vibes;
+}
+
+/* Testimonials Container */
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Individual Testimonial Card */
+.testimonial-card {
+  background-color: #e8dfd9;
+  padding: 30px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Circular Images */
+.testimonial-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Star Rating */
+.stars {
+  font-size: 18px;
+  color: #a97c63;
+  margin-bottom: 15px;
+}
+
+/* Testimonial Text */
+.testimonial-card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Client Name */
+.testimonial-card h3 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #4a3f35;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+
+
+
+/* Fullscreen Video Banner */
+.video-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Background Video */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Dark Overlay for Better Readability */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Adjust opacity for effect */
+  z-index: -1;
+}
+
+/* Centered Content */
+.content {
+  position: relative;
+  color: white;
+  max-width: 600px;
+  padding: 20px;
+}
+
+/* Styling for the Heading */
+.content h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
+/* Styling for the Description */
+.content p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Button Styling */
+.shop-button {
+  display: inline-block;
+  border: 2px solid white;
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.shop-button:hover {
+  background: white;
+  color: black;
+}
+/* Reset Default Styles */
+
+
+
+
+/* Blog Section */
+.blog-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.blog-section h2 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+/* Blog Container */
+.blog-container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+/* Individual Blog Cards */
+.blog-card {
+  background: transparent;
+  width: 30%;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Blog Titles */
+.blog-card h3 {
+  font-size: 1.5rem;
+  margin: 15px 0 5px;
+  font-weight: normal;
+  font-family:great vibes;
+
+}
+.blog-card h3:hover{
+text-decoration: underline;
+cursor: pointer;
+}
+
+/* Date Styling */
+.date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+}
+
+/* Excerpt Styling */
+.excerpt {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #4d4d4d;
+}
+.bt2{
+background-color: black;
+color: white;
+border: 1px solid white;
+width: 130px;
+height: 50px;
+margin: 43px 20px 20px 532px
+
+}
+
+
+
+
+footer{
+height: 520px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background:#B8A293;
+margin: 0 auto;
+font-size:15px;
+position: relative;
+
+color: white;
+
+}
+#footer-container{
+ margin-bottom: 12vw; 
+ display: flex;
+}
+
+
+.footer-links {
+font-size:16px;
+  padding: 0px 20px 20px 34px;
+  width: 250px;
+  
+}
+
+
+h2 {
+  font-family:great vibes;
+  font-size: 24px;
+  font-weight: normal;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 20px 0;
+  font-family:Roboto;
+  font-size:14px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  
+  transition: 0.3s;
+}
+
+
+
+ul li a:hover {
+  padding: 10px 0px;
+  opacity: 0.7;
+  text-decoration:underline;
+}
+ul li a {
+  padding: 20px 0px;
+  
+}
+.footer-column {
+ padding-right: 62px;
+ margin-bottom: 250px;
+ width:342px;
+ margin-left: 90px;
+}
+
+.special{
+font-family: Roboto;
+font-size: 14px;
+
+}
+
+.logo img {
+margin: 15px 0px 0px 121px;
+}
+
+.subscribe-section {
+ 
+ margin: 0px 18vw -100px -119vw;
+}
+.subscribe-section h2{
+ 
+ font-family: great vibes;
+}
+input::placeholder {
+  color: white;  /* Apne pasand ka color set karo */
+  opacity: 1;  /* Full visibility ke liye */
+}
+button{
+color: white;
+
+}
+
+
+.email-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  border: 1px solid white;
+}
+
+.email-input input {
+  padding: 10px;
+  width: 250px;
+  background: #B8A293;
+  border: none;
+ 
+}
+
+
+.email-input button {
+  background: #B8A293;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 28vw;
+  font-size: 11px;
+
+}
+.social-icons{
+  margin: 370px -58vw 0px 12px !important;
+
+}
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 18px;
+  text-decoration: none;
+  margin-right: 2vw;
+}
+.footer-bottom p{
+margin-right: 38vw;
+margin-top: 8vw;
+
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 601px) {
+.header{
+width: 400px !important;
+
+}
+
+  .hamburger{
+  display: block !important;
+ 
+}
+.nav-links{
+display:none !important;
+
+}
+
+.right-icons i{
+display: block !important;
+padding-top: 10px;
+
+}
+
+}
