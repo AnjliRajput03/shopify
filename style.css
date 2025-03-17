@@ -662,7 +662,7 @@ p {
 footer {
   height: 520px;
   display: flex;
-  justify-content: space-between;
+  overflow-y: hidden;
   align-items: center;
   background: #b8a293;
   margin: 0 auto;
@@ -732,7 +732,7 @@ ul li a {
 }
 
 .subscribe-section {
-  margin: 0px 18vw -100px -119vw;
+  margin: 0px 18vw -100px -92vw;
 }
 .subscribe-section h2 {
   font-family: great vibes;
@@ -772,6 +772,7 @@ button {
   text-align: center;
   margin-top: 28vw;
   font-size: 11px;
+  margin: 365px 0px 0px 59vw;
 }
 .social-icons {
   margin: 370px -58vw 0px 12px !important;
@@ -784,8 +785,7 @@ button {
   margin-right: 2vw;
 }
 .footer-bottom p {
-  margin-right: 38vw;
-  margin-top: 8vw;
+margin: 8vw 3vw 0px -305px;
 }
 /* Responsive Design */
 
